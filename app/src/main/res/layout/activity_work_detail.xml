@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_list"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue">
+
+            <TextView
+                android:id="@+id/tv_work_detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:maxEms="12"
+                android:text="工作详情"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_back_workDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="8dp"
+                android:src="@mipmap/image_b" />
+
+            <ImageView
+                android:id="@+id/iv_work_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/dp_12"
+                android:src="@drawable/ic_edit_white" />
+
+        </RelativeLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/devider"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/tv_work_detail_project"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/ll_time"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/text_bg"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="@dimen/dp_10"
+                        android:paddingTop="6dp"
+                        android:text="工程项目管理"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_fuzeren"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_work_detail_project">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/civ_work_detail_fuzeren"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="12dp"
+                            android:src="@mipmap/image_weibo_home_2"
+                            app:civ_border_color="@color/colorRedBg"
+                            app:civ_border_width="1dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_work_detail_fuzeren"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="bottom"
+                                android:textColor="@color/colorH"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_work_detail_department"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/colorH"
+                                android:textSize="@dimen/sp_12"
+                                android:visibility="visible" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                    <ImageButton
+                        android:layout_below="@+id/tv_work_detail_project"
+                        android:id="@+id/ib_work_detail_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:background="@null"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_mylocation" />
+
+
+                    <TextView
+                        android:paddingLeft="@dimen/space_20dp"
+                        android:layout_marginEnd="@dimen/dp_12"
+                        android:layout_below="@+id/ib_work_detail_location"
+                        android:id="@+id/tv_work_detail_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/text_gray"
+                        android:textSize="12sp"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/ll_fuzeren"
+                        android:layout_margin="@dimen/dp_4"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="项目周期："
+                            android:textColor="@color/colorH"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_work_detail_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:text="2018.06.10 - 06.30"
+                            android:textColor="@color/colorH"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_4"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_4"
+                        android:paddingStart="@dimen/dp_10"
+                        android:text="工作进度："
+                        android:textColor="@color/colorH"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_work_detail_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/colorH"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/ll_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_4"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/dp_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_4"
+                        android:text="标签："
+                        android:textColor="@color/colorH"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_work_detail_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/colorH"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:paddingStart="@dimen/dp_10"
+                    android:text="工作详情："
+                    android:textColor="@color/colorH"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_work_detail_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:background="@color/white"
+                    android:lineSpacingExtra="6dp"
+                    android:padding="@dimen/dp_10"
+                    android:textColor="@color/colorH"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    android:paddingStart="@dimen/dp_10"
+                    android:text="参与人员："
+                    android:textColor="@color/colorH"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_partIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/tv_work_detail_canyu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/dp_10"
+                        android:textColor="@color/colorH"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <com.example.q_kang.pmsystem.ui.view.Utils.view_.PileLayout
+                        android:id="@+id/pl_work_detail_member"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:padding="@dimen/dp_4"
+                        app:PileLayout_pileWidth="20dp" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_eventlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="8dp"
+                        android:paddingStart="@dimen/dp_10"
+                        android:text="工作明细"
+                        android:textColor="@color/colorRedBg"
+                        android:textSize="17sp" />
+
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/fab_add_event"
+                        style="@style/project_fab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/fab_add"
+                        app:fab_size="mini" />
+                </RelativeLayout>
+
+
+                <com.fingdo.statelayout.StateLayout
+
+                    android:id="@+id/sl_work_event"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recy_work_event"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@null" />
+                </com.fingdo.statelayout.StateLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+

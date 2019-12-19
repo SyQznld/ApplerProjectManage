@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_schedule"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space_3dp"
+    android:layout_marginLeft="@dimen/space_3dp"
+    android:layout_marginRight="@dimen/space_3dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/vScheduleHintBlock"
+        android:layout_width="10dp"
+        android:layout_height="@dimen/schedule_item_size"
+        android:background="@drawable/blue_schedule_left_block" />
+
+    <TextView
+        android:id="@+id/tv_state_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/finish_schedule_hint"
+        android:gravity="center"
+        android:minWidth="50dp"
+        android:padding="3dp"
+        android:text="Finish"
+        android:textColor="@color/color_schedule_finish"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tv_title_schedule"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:text="待办名称"
+        android:textColor="@color/color_schedule_title_text"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_time_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:text="2018-07-30"
+        android:textColor="@color/color_schedule_title_text"
+        android:textSize="14sp" />
+
+</LinearLayout>
+

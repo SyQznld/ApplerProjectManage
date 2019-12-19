@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.example.q_kang.pmsystem.ui.activity.ModelActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_model_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_10"
+                    android:src="@mipmap/image_b"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="项目模板"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:id="@+id/tv_model_new"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_border"
+                    android:drawableTop="@mipmap/model_new"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/dp_12"
+                    android:paddingTop="12dp"
+                    android:text="@string/model_new"
+                    android:textColor="#FFCCCCCC"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_model_one"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="24dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/model_1"
+                    android:gravity="center"
+                    android:text="空模板"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal"
+                android:paddingRight="24dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_model_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@mipmap/model_2"
+                    android:gravity="center"
+                    android:text="@string/model_two"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_model_three"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/model_3"
+                    android:gravity="center"
+                    android:text="@string/model_three"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <com.fingdo.statelayout.StateLayout
+                android:id="@+id/sl_work_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:paddingRight="24dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_gongzuo_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@+id/ib_gongzuo_arrows"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginTop="16dp"
+                            android:layout_toRightOf="@+id/tv_gongzuomuban"
+                            android:background="@null"
+                            android:clickable="false"
+                            android:src="@drawable/ic_row_down" />
+
+                        <TextView
+                            android:id="@+id/tv_gongzuomuban"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="@dimen/dp_12"
+                            android:text="工作模板"
+                            android:textColor="@color/colorRedBg"
+                            android:textSize="@dimen/text_size_18sp" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/re_work_model"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_gongzuo_arrow" />
+
+                </RelativeLayout>
+            </com.fingdo.statelayout.StateLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:background="@color/textcolor" />
+
+            <com.fingdo.statelayout.StateLayout
+                android:id="@+id/sl_event_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:paddingRight="24dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_shijian_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@+id/ib_shijian_arrows"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginTop="16dp"
+                            android:layout_toRightOf="@+id/tv_shijianmuban"
+                            android:background="@null"
+                            android:clickable="false"
+                            android:src="@drawable/ic_row_down" />
+
+                        <TextView
+                            android:id="@+id/tv_shijianmuban"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="@dimen/dp_12"
+                            android:text="事件模板"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/text_size_18sp" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/re_event_model"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_shijian_arrow" />
+
+                </RelativeLayout>
+            </com.fingdo.statelayout.StateLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

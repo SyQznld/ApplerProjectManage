@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.example.q_kang.pmsystem.ui.view.Utils.view_.MyImageView
+            android:id="@+id/group_image"
+            android:src="@mipmap/ic_launcher"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="18dip"
+            android:paddingBottom="10dip"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="150dip" />
+
+        <TextView
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:id="@+id/group_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="5dip"
+            android:text="5"
+            android:layout_gravity="bottom|center_horizontal" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/group_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/framelayout"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="Camera"
+        android:textSize="16sp" />
+</RelativeLayout>

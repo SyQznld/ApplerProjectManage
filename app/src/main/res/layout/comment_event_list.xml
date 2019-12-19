@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:id="@+id/tv_comment_person"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/text_bg"
+            android:padding="8dp"
+            android:text="段妞妞"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#eee" />
+
+        <TextView
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:id="@+id/tv_ecomment_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="事件需要修改cvnwoihvwuibcvwoincoawicnienciw"
+            android:textColor="@color/textcolor"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_comment_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/dp_8"
+                android:text="2018-08-15"
+                android:textSize="13sp" />
+
+            <ImageButton
+                android:id="@+id/ib_comment_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:padding="8dp"
+                android:src="@drawable/ic_edit" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#eee"/>
+
+
+</LinearLayout>

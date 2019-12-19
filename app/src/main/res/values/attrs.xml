@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RoundedCornersImage">
+        <attr name="cornerRadius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="ExtendedListView">
+        <attr name="scrollBarPanel" format="reference" />
+        <attr name="scrollBarPanelInAnimation" format="reference" />
+        <attr name="scrollBarPanelOutAnimation" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="RippleBackground">
+        <attr name="rb_color" format="color" />
+        <attr name="rb_strokeWidth" format="dimension" />
+        <attr name="rb_radius" format="dimension" />
+        <attr name="rb_duration" format="integer" />
+        <attr name="rb_rippleAmount" format="integer" />
+        <attr name="rb_scale" format="float" />
+        <attr name="rb_type" format="enum">
+            <enum name="fillRipple" value="0" />
+            <enum name="strokeRipple" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+    <string-array name="projectStyles">
+        <item>房地产</item>
+        <item>图斑采集</item>
+    </string-array>
+
+
+    <attr name="iconSize" format="dimension" />
+    <attr name="iconMargin" format="dimension" />
+    <attr name="iconSrc" format="reference" />
+    <attr name="duration_max" format="integer" />
+    <declare-styleable name="JCameraView">
+        <attr name="iconSize" />
+        <attr name="iconMargin" />
+        <attr name="iconSrc" />
+        <attr name="duration_max" />
+    </declare-styleable>
+
+
+    <declare-styleable name="SmoothCheckBox">
+        <attr name="duration" format="integer" />
+        <attr name="stroke_width" format="dimension" />
+        <attr name="color_tick" format="color" />
+        <attr name="color_checked" format="color" />
+        <attr name="color_unchecked" format="color" />
+        <attr name="color_unchecked_stroke" format="color" />
+    </declare-styleable>
+
+    <string-array name="provinces">
+        <item>用户1</item>
+        <item>用户2</item>
+        <item>用户3</item>
+        <item>用户4</item>
+        <item>用户5</item>
+        <item>用户6</item>
+        <item>用户7</item>
+        <item>用户8</item>
+        <item>用户9</item>
+        <item>用户10</item>
+        <item>用户11</item>
+        <item>用户12</item>
+        <item>用户13</item>
+        <item>用户14</item>
+        <item>用户15</item>
+        <item>用户16</item>
+        <item>用户17</item>
+        <item>用户18</item>
+        <item>用户19</item>
+        <item>用户20</item>
+        <item>用户21</item>
+        <item>用户22</item>
+        <item>用户23</item>
+        <item>用户24</item>
+        <item>用户25</item>
+        <item>用户26</item>
+        <item>用户27</item>
+        <item>用户28</item>
+        <item>用户29</item>
+        <item>用户30</item>
+        <item>用户31</item>
+        <item>用户32</item>
+
+        <item>A</item>
+        <item>a</item>
+        <item>b</item>
+        <item>d</item>
+
+        <item>.a</item>
+        <item>;b</item>
+        <item>#c</item>
+        <item>d</item>
+
+        <item>ab</item>
+        <item>aa</item>
+    </string-array>
+
+    <string-array name="groups">
+        <item>虚拟旅游中心</item>
+        <item>财务室</item>
+        <item>航测数据中心</item>
+        <item>数据服务中心</item>
+        <item>办公室</item>
+        <item>总经理</item>
+        <item>智慧交通中心</item>
+        <item>许昌测绘中心</item>
+        <item>航测三部</item>
+        <item>地理信息中心</item>
+        <item>后勤服务中心</item>
+        <item>航飞管理中心</item>
+        <item>不动产禹州分布</item>
+        <item>智慧国土中心</item>
+        <item>航飞一部</item>
+        <item>智能硬件中心</item>
+        <item>信息模型中心</item>
+        <item>山东灏图分公司</item>
+        <item>文化创意中心</item>
+        <item>测绘三部</item>
+        <item>遥感分析中心</item>
+        <item>许昌数据中心</item>
+        <item>测绘一部</item>
+        <item>北京分公司</item>
+        <item>发展研究中心</item>
+        <item>航飞二部</item>
+        <item>测绘管理中心</item>
+        <item>新疆分公司</item>
+        <item>三维GIS研发中心</item>
+        <item>菏泽服务中心</item>
+        <item>市场管理中心</item>
+        <item>工程技术中心</item>
+        <item>智慧规划中心</item>
+        <item>大数据研发中心</item>
+        <item>智慧城市中心</item>
+        <item>3D打印技术中心</item>
+        <item>档案室</item>
+        <item>测绘五部</item>
+        <item>数字档案研发中心</item>
+        <item>倾斜摄影中心</item>
+        <item>地理信息研发中心</item>
+        <item>测绘四部</item>
+        <item>测绘二部</item>
+        <item>土地规划中心</item>
+    </string-array>
+
+    <string-array name="groupsMember">
+        <item>模板一</item>
+        <item>模板二</item>
+        <item>模板三</item>
+        <item>软件系统</item>
+        <item>正射影像制作</item>
+        <item>倾斜模型制作</item>
+        <item>地形图测绘</item>
+        <item>拆迁测量</item>
+        <item>模板九</item>
+        <item>模板十</item>
+    </string-array>
+
+    <string-array name="selectProject">
+        <item>独立工作</item>
+        <item>工程项目管理</item>
+        <item>微信订餐系统</item>
+        <item>双违执法监管</item>
+        <item>轨道交通占道施工</item>
+        <item>许昌利用</item>
+        <item>OA办公平台</item>
+        <item>十八里河一张图</item>
+        <item>地图院拍照调绘</item>
+        <item>界线管理系统</item>
+        <item>平顶山智慧扶贫</item>
+    </string-array>
+
+    <string-array name="projectFlow">
+        <item>需求分析</item>
+        <item>程序设计</item>
+        <item>程序开发</item>
+        <item>程序测试</item>
+        <item>程序文档</item>
+    </string-array>
+
+    <string-array name="addPhotos">
+        <item>项目相册</item>
+        <item>本机相册</item>
+        <item>拍照</item>
+    </string-array>
+
+    <string-array name="addRecord">
+        <item>录音</item>
+        <item>本机录音</item>
+    </string-array>
+
+    <string-array name="addFiles">
+        <item>项目文件</item>
+        <item>本机文件</item>
+    </string-array>
+
+
+
+    <string-array name="createModel">
+        <item>新建工作模板</item>
+        <item>新建事件模板</item>
+    </string-array>
+
+
+    <string-array name="departmentMembers">
+        <item>段妞妞</item>
+        <item>姚博文</item>
+        <item>常俊升</item>
+        <item>申淑欢</item>
+        <item>秦康</item>
+        <item>单亚亚</item>
+        <item>牛俊朋</item>
+        <item>刘艳艳</item>
+        <item>李猛</item>
+        <item>钟雯静</item>
+        <item>谷春雨</item>
+        <item>翟祎</item>
+        <item>刘艳勇</item>
+        <item>顾兴钦</item>
+    </string-array>
+
+    <declare-styleable name="PileLayout">
+        <attr name="PileLayout_vertivalSpace" format="dimension" />
+        <attr name="PileLayout_pileWidth" format="dimension" />
+    </declare-styleable>
+</resources>

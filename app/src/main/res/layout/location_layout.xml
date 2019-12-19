@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_marker"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:clickable="true"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_marker_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_login_bg"
+        android:padding="4dp"
+        android:text="11111"
+        android:textColor="#fff"
+        android:textSize="12sp" />
+
+
+    <ImageView
+        android:padding="5dp"
+        android:id="@+id/iv_marker_site"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/image_location" />
+
+
+</LinearLayout>

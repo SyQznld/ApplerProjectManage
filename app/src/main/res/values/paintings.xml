@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="paintings_authors">
+        <item>Vincent van Gogh</item>
+        <item>Vincent van Gogh</item>
+    </string-array>
+
+    <string-array name="paintings_titles">
+        <item>Almond Blossom</item>
+        <item>Peach Tree in Bloom</item>
+    </string-array>
+
+    <array name="paintings_images">
+        <item>@mipmap/aaa</item>
+        <item>@mipmap/active_invite_banner</item>
+
+    </array>
+
+    <array name="paintings_thumbs">
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+    </array>
+
+    <array name="paintings_links">
+        <item>https://www.wikiart.org/en/vincent-van-gogh/branches-with-almond-blossom-1890</item>
+        <item>
+            https://www.wikiart.org/en/vincent-van-gogh/peach-tree-in-bloom-in-memory-of-mauve-1888
+        </item>
+        
+    </array>
+
+</resources>

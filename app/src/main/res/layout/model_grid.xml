@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="24dp"
+    android:layout_marginTop="18dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_model"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:background="@mipmap/model_other">
+
+        <TextView
+            android:id="@+id/tv_model_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="7dp"
+            android:src="@mipmap/model_more" />
+
+
+    </RelativeLayout>
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical"-->
+    <!--android:padding="10dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_name"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:text="@string/app_name"-->
+    <!--android:textColor="#000"-->
+    <!--android:textSize="13sp"-->
+    <!--android:transitionName="transition name" />-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginEnd="5dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:background="#eee" />-->
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/line"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:transitionName="name">-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/re_modelContext"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center" />-->
+    <!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+
+</LinearLayout>
+
+

@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.q_kang.pmsystem.ui.activity.event.EventDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="事件详情"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_event_detail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="8dp"
+            android:src="@mipmap/image_b" />
+
+        <TextView
+            android:id="@+id/tv_event_detail_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:padding="12dp"
+            android:src="@mipmap/add_im"
+            android:text="编辑"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_event"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_basic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/dp_12">
+
+                    <LinearLayout
+                        android:id="@+id/ll_event_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/dp_12"
+                            android:paddingTop="@dimen/dp_12">
+
+                            <TextView
+                                android:id="@+id/tv_event_detail_bt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/dp_10"
+                                android:text="刺客伍六七"
+                                android:textColor="@color/black9"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_event_detail_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/dp_10"
+                                android:text="刺客伍六七"
+                                android:textColor="@color/textcolor"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_event_detail_belong"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="新兴国产动漫、需要多多支持！！！"
+                                    android:textColor="@color/textcolor"
+                                    android:textSize="15sp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_event_detail_location"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:padding="@dimen/dp_10"
+                                    android:src="@mipmap/image_location" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_time" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_event_detail_start"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="@dimen/dp_8"
+                                        android:paddingRight="@dimen/dp_8"
+                                        android:text="nxjaghj"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_event_detail_end"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="@dimen/dp_8"
+                                        android:text="dhau"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/iv_event_detail_complete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:src="@mipmap/event_doing" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <com.example.q_kang.pmsystem.ui.view.Utils.view_.SearchLabelFlowLayout
+                        android:layout_marginEnd="@dimen/dp_12"
+                        android:layout_below="@+id/ll_event_1"
+                        android:id="@+id/ll_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_event_detail_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_location_bg"
+                            android:gravity="center_horizontal"
+                            android:padding="5dp"
+                            android:text="nxjagcfvvvv"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_12" />
+                    </com.example.q_kang.pmsystem.ui.view.Utils.view_.SearchLabelFlowLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_label"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/dp_12"
+                        android:paddingRight="@dimen/dp_12"
+                        android:paddingTop="@dimen/dp_8">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:id="@+id/ll_fuzeren"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/civ_event_detail_launch"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@mipmap/image_weibo_home_2"
+                                    app:civ_border_color="@color/white"
+                                    app:civ_border_width="2dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_event_detail_fuzeren"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:maxLines="1"
+                                    android:paddingTop="@dimen/dp_4"
+                                    android:text="何小风"
+                                    android:textColor="@color/black9"
+                                    android:textSize="@dimen/sp_14" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="@dimen/dp_40"
+                                android:layout_height="1dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/dp_12"
+                                android:background="@color/colorH" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/zhipai_bg"
+                                android:maxLines="1"
+                                android:paddingBottom="@dimen/dp_4"
+                                android:paddingLeft="@dimen/dp_12"
+                                android:paddingRight="@dimen/dp_12"
+                                android:paddingTop="@dimen/dp_4"
+                                android:text="指派给"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/sp_12" />
+
+                            <LinearLayout
+                                android:layout_width="@dimen/dp_40"
+                                android:layout_height="1dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/dp_12"
+                                android:background="@color/colorH" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_zhixingren"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:clickable="false"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <com.example.q_kang.pmsystem.ui.view.Utils.view_.PileLayout
+                                        android:id="@+id/pl_event_detail_member"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        app:PileLayout_pileWidth="20dp" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_event_zhixingren_more_more"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:background="@null"
+                                        android:src="@drawable/ic_more"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/tv_event_detail_canyu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="bhvgwauc"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/tv_event_detail_zhixingren"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal|bottom"
+                                    android:maxLines="1"
+                                    android:paddingTop="@dimen/dp_4"
+                                    android:text="共%d人"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/sp_14" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:background="@color/devider">
+
+                    <LinearLayout
+                        android:id="@+id/ll_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:text="批示"
+                            android:textColor="#444444"
+                            android:textSize="11sp" />
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rv_event_comment"/>
+
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/tv_comment_person"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:paddingBottom="10dp"
+                            android:paddingEnd="@dimen/dp_12"
+                            android:paddingLeft="@dimen/dp_12"
+                            android:paddingTop="10dp"
+                            android:text="nxjagcfvvvv"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:background="#eee" />
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/tv_event_detail_comment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:paddingBottom="10dp"
+                            android:paddingEnd="@dimen/dp_12"
+                            android:paddingLeft="@dimen/dp_12"
+                            android:paddingTop="10dp"
+                            android:text="nxjagcfvvvv"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/devider">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="附件"
+                        android:textColor="#444444"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_8"
+                    android:text="照片"
+                    android:textColor="@color/textcolor"
+                    android:textSize="13sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recy_event_detail_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_8"
+                    android:text="音频"
+                    android:textColor="@color/textcolor"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_add_record" />
+
+                    <com.example.q_kang.pmsystem.ui.view.Utils.view_.MyListView
+                        android:id="@+id/lv_event_detail_record"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_12"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:divider="@null" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_8"
+                    android:text="文件"
+                    android:textColor="@color/textcolor"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_file"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_file" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_event_detail_file"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_12"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:divider="@null" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_edit"
+                    android:layout_width="307dp"
+                    android:layout_height="47dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape_location_bg"
+                    android:text="提交"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fam_event_detail"
+            style="@style/DetailMenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="13dp"
+            app:menu_colorNormal="#fa6062"
+            app:menu_colorPressed="#ff8585"
+            app:menu_colorRipple="#ec3636"
+            app:menu_fab_size="normal"
+            app:menu_icon="@drawable/ic_menu"
+            app:menu_labels_position="left"
+            app:menu_labels_style="@style/MenuLabelsStyle"
+            app:menu_shadowColor="#444">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:visibility="gone"
+                android:id="@+id/fab_event_comment"
+                style="@style/DetailMenuButtonsStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_comment"
+                app:fab_colorDisabled="#ff8585"
+                app:fab_label="批示"
+                app:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:visibility="gone"
+                android:id="@+id/fab_event_edit_comment"
+                style="@style/DetailMenuButtonsStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_edit_white"
+                app:fab_colorDisabled="#ff8585"
+                app:fab_label="批示编辑"
+                app:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_event_complete"
+                style="@style/DetailMenuButtonsStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/image_sure"
+                app:fab_colorDisabled="#ff8585"
+                app:fab_label="完成"
+                app:fab_size="mini" />
+        </com.github.clans.fab.FloatingActionMenu>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_record"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#b8ffffff"
+        android:visibility="gone">
+
+        <com.example.q_kang.pmsystem.ui.view.Utils.custom_view.record.AudioRecordButton
+            android:id="@+id/ab_em_tv_btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="#cdcdcd"
+            android:gravity="center"
+            android:text="@string/long_click_record"
+            android:textColor="@color/textcolor"
+            android:textSize="16dp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+</LinearLayout>

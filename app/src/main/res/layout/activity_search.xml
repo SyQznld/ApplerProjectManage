@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_search_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/ic_back" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/et_search_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_10"
+                android:layout_weight="1"
+                android:background="@drawable/input_box"
+                android:drawableLeft="@drawable/ic_search_small"
+                android:drawablePadding="8dp"
+                android:hint="@string/search"
+                android:padding="8dp"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/ib_search_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:paddingEnd="@dimen/dp_12"
+                android:src="@drawable/ic_cancel" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_search_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/dp_12"
+            android:text="搜索"
+            android:textColor="@color/blue"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee" />
+
+    <LinearLayout
+        android:id="@+id/ll_search_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/space_30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="搜索指定内容"
+            android:textSize="13sp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/tv_search_project"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:text="项目"
+                android:textColor="@color/search_tv_color" />
+
+            <TextView
+                style="@style/AppTheme.Label.Search"
+                android:layout_marginLeft="@dimen/padding_common_h"
+                android:layout_marginRight="@dimen/padding_common_h"
+                android:text="|" />
+
+
+            <RadioButton
+                android:id="@+id/tv_search_work"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:text="工作"
+                android:textColor="@color/search_tv_color" />
+
+            <TextView
+                style="@style/AppTheme.Label.Search"
+                android:layout_marginLeft="@dimen/padding_common_h"
+                android:layout_marginRight="@dimen/padding_common_h"
+                android:text="|" />
+
+
+            <RadioButton
+                android:id="@+id/tv_search_event"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:text="事件"
+                android:textColor="@color/search_tv_color" />
+
+            <RadioButton
+                android:id="@+id/tv_search_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:text="人名"
+                android:textColor="@color/color_schedule_green"
+                android:visibility="gone" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/space_20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/tv_search_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:text="标签"
+                android:textColor="@color/search_tv_color" />
+
+            <TextView
+                style="@style/AppTheme.Label.Search"
+                android:layout_marginLeft="@dimen/padding_common_h"
+                android:layout_marginRight="@dimen/padding_common_h"
+                android:text="|" />
+
+            <RadioButton
+                android:id="@+id/tv_search_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:text="标题"
+                android:textColor="@color/search_tv_color" />
+
+            <TextView
+                style="@style/AppTheme.Label.Search"
+                android:layout_marginLeft="@dimen/padding_common_h"
+                android:layout_marginRight="@dimen/padding_common_h"
+                android:text="|" />
+
+            <RadioButton
+                android:id="@+id/tv_search_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:text="内容"
+                android:textColor="@color/search_tv_color" />
+
+            <TextView
+                style="@style/AppTheme.Label.Search"
+                android:layout_marginLeft="@dimen/padding_common_h"
+                android:layout_marginRight="@dimen/padding_common_h"
+                android:text="|" />
+
+            <RadioButton
+                android:id="@+id/tv_search_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:text="时间"
+                android:textColor="@color/search_tv_color" />
+
+            <TextView
+                style="@style/AppTheme.Label.Search"
+                android:layout_marginLeft="@dimen/padding_common_h"
+                android:layout_marginRight="@dimen/padding_common_h"
+                android:text="|"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/tv_search_person"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_20dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:text="人名"
+                android:textColor="@color/search_tv_color"
+                android:visibility="gone" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_search_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="114dp"
+            android:background="#cccccc" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#cccccc" />
+    </LinearLayout>
+
+
+</LinearLayout>

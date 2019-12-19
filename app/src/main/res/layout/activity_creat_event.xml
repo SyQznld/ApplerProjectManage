@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.q_kang.pmsystem.ui.activity.event.CreateEventActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue">
+
+        <ImageButton
+            android:id="@+id/ib_create_event_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="@dimen/dp_10"
+            android:src="@mipmap/image_b" />
+
+        <TextView
+            android:id="@+id/tv_event_creat_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="新建事件"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_event_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:padding="12dp"
+            android:src="@mipmap/add_im"
+            android:text="提交"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_creat_event_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/devider">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="8dp"
+                        android:text="基本信息"
+                        android:textColor="#444444"
+                        android:textSize="11sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/child_height">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="3"
+                        android:text="        所属工作："
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_event_work"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/textcolor"
+                        android:textSize="13sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee" />
+
+                <LinearLayout
+                    android:id="@+id/ll_event_project"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/child_height">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="3"
+                            android:text="        所属项目："
+                            android:textColor="#000"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tv_event_project"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="6"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/textcolor"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eee" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/child_height">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="3"
+                        android:text="***   事件标题："
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:maxLength="30"
+                        android:id="@+id/et_event_namebt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:background="@null"
+                        android:hint="请输入事件标题(不超过30字) "
+                        android:textColor="@color/textcolor"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/child_height">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="3"
+                        android:text="***   事件内容："
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/et_event_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:background="@null"
+                        android:hint="请输入事件内容"
+                        android:textColor="@color/textcolor"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/child_height">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="3"
+                        android:text="        标签类型："
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/et_event_type"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:background="@null"
+                        android:hint="请输入事件标签类型"
+                        android:textColor="@color/textcolor"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/child_height">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="3"
+                        android:text="***      负责人："
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/civ_event_create_head"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:src="@mipmap/bottom_mine" />
+
+                        <TextView
+                            android:id="@+id/tv_event_create"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="5"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/textcolor"
+                            android:textSize="13sp" />
+
+                        <ImageButton
+                            android:id="@+id/ib_event_create_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:padding="12dp"
+                            android:src="@drawable/ic_arrow_right" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/child_height">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="3"
+                        android:text="***      执行者："
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/tv_event_canyu"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/textcolor"
+                            android:textSize="13sp" />
+
+                        <com.example.q_kang.pmsystem.ui.view.Utils.view_.PileLayout
+                            android:id="@+id/pl_event_member"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="5"
+                            android:background="@null"
+                            android:textSize="13sp"
+
+                            app:PileLayout_pileWidth="20dp" />
+
+                        <ImageButton
+                            android:id="@+id/ib_event_member_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:src="@drawable/ic_more"
+                            android:visibility="gone" />
+
+                        <ImageButton
+                            android:id="@+id/ib_event_member_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:padding="12dp"
+                            android:src="@drawable/ic_arrow_right" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/child_height">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="3"
+                        android:text="***   开始时间："
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/tv_event_time_start"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="6"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请选择开始时间"
+                        android:paddingEnd="20dp"
+                        android:textColor="@color/textcolor"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/child_height">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="3"
+                        android:text="***   结束时间："
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/tv_event_time_end"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="6"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请选择结束时间"
+                        android:paddingEnd="20dp"
+                        android:textColor="@color/textcolor"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/child_height">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="3"
+                        android:text="***   事件位置："
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_event_location"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:background="@null"
+                        android:drawableLeft="@mipmap/image_location"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:paddingEnd="20dp"
+                        android:text="点击选择事件位置"
+                        android:textColor="@color/textcolor"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_event_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eee" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_event_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/devider"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="详细信息"
+                        android:textColor="#444444"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/et_event_describe"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="#fff"
+                    android:gravity="start"
+                    android:hint="对此事件做一些描述"
+                    android:padding="@dimen/dp_10"
+                    android:textColor="@color/textcolor"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/devider">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="添加附件"
+                        android:textColor="#444444"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_event_choose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_8"
+                    android:text="照片"
+                    android:textColor="@color/textcolor"
+                    android:textSize="13sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recy_event_gather_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_8"
+                    android:text="音频"
+                    android:textColor="@color/textcolor"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_add_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_add_record" />
+
+                    <com.example.q_kang.pmsystem.ui.view.Utils.view_.MyListView
+                        android:id="@+id/lv_event_record"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_12"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:divider="@null" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_8"
+                    android:text="文件"
+                    android:textColor="@color/textcolor"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_add_file"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_file" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_event_file"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_12"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:divider="@null" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bottom_navigation_height"
+                    android:background="@color/devider" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_creat_event_record"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b8ffffff"
+            android:visibility="gone">
+
+            <com.example.q_kang.pmsystem.ui.view.Utils.custom_view.record.AudioRecordButton
+                android:id="@+id/ab_em_tv_btn"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:background="#cdcdcd"
+                android:gravity="center"
+                android:text="@string/long_click_record"
+                android:textColor="@color/textcolor"
+                android:textSize="16dp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

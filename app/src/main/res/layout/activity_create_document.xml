@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.q_kang.pmsystem.ui.activity.document.CreateDocumentActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue">
+
+        <ImageButton
+            android:id="@+id/ib_document_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="@dimen/dp_10"
+            android:src="@mipmap/image_b" />
+
+        <TextView
+            android:id="@+id/tv_create_document_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="新建邮件"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nsv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_12"
+                    android:background="@color/devider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:text="标题"
+                        android:textColor="@color/textcolor"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/et_document_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_10"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入邮件标题(***必填，不超过50字)"
+                        android:maxLength="50"
+                        android:padding="5dp"
+                        android:textColor="@color/textcolor"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:text="正文"
+                        android:textColor="@color/textcolor"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/et_document_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_10"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入邮件内容"
+                        android:padding="5dp"
+                        android:textColor="@color/textcolor"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#eee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/child_height"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:text="收件人"
+                        android:textColor="@color/textcolor"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <com.example.q_kang.pmsystem.ui.view.Utils.view_.PileLayout
+                            android:id="@+id/pl_document_receiver"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="5"
+                            android:background="@null"
+                            android:textSize="13sp"
+                            app:PileLayout_pileWidth="20dp" />
+
+                        <ImageButton
+                            android:id="@+id/ib_document_receiver_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:src="@drawable/ic_more"
+                            android:visibility="gone" />
+
+                        <ImageButton
+                            android:id="@+id/ib_document_receiver_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:padding="12dp"
+                            android:src="@drawable/ic_arrow_right" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/devider">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_12"
+                            android:padding="8dp"
+                            android:text="附件"
+                            android:textColor="@color/textcolor"
+                            android:textSize="11sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_event_choose"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="5"
+                        android:background="@null"
+                        android:paddingBottom="@dimen/dp_8"
+                        android:paddingTop="@dimen/dp_8"
+                        android:text="照片"
+                        android:textColor="@color/textcolor"
+                        android:textSize="13sp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recy_event_gather_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="5"
+                        android:background="@null"
+                        android:paddingBottom="@dimen/dp_8"
+                        android:paddingTop="@dimen/dp_8"
+                        android:text="音频"
+                        android:textColor="@color/textcolor"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_add_record"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:src="@drawable/ic_add_record" />
+
+                        <com.example.q_kang.pmsystem.ui.view.Utils.view_.MyListView
+                            android:id="@+id/lv_event_record"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:divider="@null" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="5"
+                        android:background="@null"
+                        android:paddingBottom="@dimen/dp_8"
+                        android:paddingTop="@dimen/dp_8"
+                        android:text="文件"
+                        android:textColor="@color/textcolor"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_add_file"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:src="@drawable/ic_file" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_event_file"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:divider="@null" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/bottom_navigation_height"
+                        android:background="@color/devider" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_creat_document_record"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b8ffffff"
+            android:visibility="gone">
+
+            <com.example.q_kang.pmsystem.ui.view.Utils.custom_view.record.AudioRecordButton
+                android:id="@+id/arb_document_btn"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:background="#cdcdcd"
+                android:gravity="center"
+                android:text="@string/long_click_record"
+                android:textColor="@color/textcolor"
+                android:textSize="16dp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fam_document_create"
+            style="@style/DetailMenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="13dp"
+            app:menu_colorNormal="#fa6062"
+            app:menu_colorPressed="#ff8585"
+            app:menu_colorRipple="#ec3636"
+            app:menu_fab_size="normal"
+            app:menu_icon="@drawable/ic_menu"
+            app:menu_labels_position="left"
+            app:menu_labels_style="@style/MenuLabelsStyle"
+            app:menu_shadowColor="#444">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_document_save"
+                style="@style/DetailMenuButtonsStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_document_save"
+                app:fab_colorDisabled="#ff8585"
+                app:fab_label="保存"
+                app:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_document_submit"
+                style="@style/DetailMenuButtonsStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_document_submit"
+                app:fab_colorDisabled="#ff8585"
+                app:fab_label="发送"
+                app:fab_size="mini" />
+        </com.github.clans.fab.FloatingActionMenu>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.example.q_kang.pmsystem.ui.activity.PersonelInfoActivity">
+
+    <ImageView
+        android:id="@+id/parallax"
+        android:layout_width="match_parent"
+        android:layout_height="670dp"
+        android:layout_marginTop="-300dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/image_weibo_home_2"
+        app:layout_collapseMode="parallax" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnablePreviewInEditMode="false">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlAccentColor="@android:color/white" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.CollapsingToolbarLayout
+                        android:id="@+id/collapse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fitsSystemWindows="true"
+                        app:contentScrim="?attr/colorPrimary"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                        app:titleEnabled="false">
+
+                        <RelativeLayout
+                            android:id="@+id/panel_lyt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="200dp"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/panel"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="40dp"
+                                android:background="@android:color/white"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="15dp"
+                                android:paddingTop="15dp">
+
+                                <com.flyco.roundview.RoundTextView
+                                    android:id="@+id/tv_personel_tel"
+                                    style="@style/AppTheme.Label"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginTop="0dp"
+                                    android:paddingBottom="8dp"
+                                    android:paddingLeft="25dp"
+                                    android:paddingRight="25dp"
+                                    android:paddingTop="8dp"
+                                    android:text="电话"
+                                    android:textColor="@android:color/white"
+                                    app:rv_backgroundColor="@color/colorPrimary"
+                                    app:rv_cornerRadius="@dimen/padding_common_d" />
+
+                                <com.flyco.roundview.RoundTextView
+                                    android:id="@+id/tv_personel_email"
+                                    style="@style/AppTheme.Label"
+                                    android:layout_marginLeft="@dimen/padding_common"
+                                    android:layout_marginRight="@dimen/padding_common"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_toLeftOf="@id/tv_personel_tel"
+                                    android:layout_toStartOf="@id/tv_personel_tel"
+                                    android:paddingBottom="8dp"
+                                    android:paddingLeft="25dp"
+                                    android:paddingRight="25dp"
+                                    android:paddingTop="8dp"
+                                    android:text="短信"
+
+
+                                    android:textColor="@color/colorPrimary"
+                                    app:rv_backgroundColor="@android:color/white"
+                                    app:rv_cornerRadius="3dp"
+                                    app:rv_strokeColor="@color/colorPrimary"
+                                    app:rv_strokeWidth="@dimen/division_line"
+                                    app:rv_textPressColor="@android:color/white" />
+
+                                <TextView
+                                    android:id="@+id/tv_personel_name"
+                                    style="@style/AppTheme.Label.Title"
+                                    android:layout_below="@id/tv_personel_tel"
+                                    android:text="TimAo" />
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_personel_depart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/tv_personel_name"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_personel_role"
+                                        style="@style/AppTheme.Label.Discription"
+                                        android:layout_marginTop="@dimen/padding_common"
+                                        android:textColor="@color/colorTextAssistant" />
+
+                                    <TextView
+                                        android:id="@+id/tv_personel_department"
+                                        style="@style/AppTheme.Label.Discription"
+                                        android:layout_marginLeft="@dimen/dp_10"
+                                        android:layout_marginTop="@dimen/padding_common"
+                                        android:textColor="@color/colorTextAssistant" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/relationship"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ll_personel_depart"
+                                    android:layout_marginTop="@dimen/padding_common">
+
+                                    <TextView
+                                        android:id="@+id/tv_personel_project"
+                                        style="@style/AppTheme.Label"
+                                        android:text="项目 10 " />
+
+                                    <TextView
+                                        style="@style/AppTheme.Label"
+                                        android:layout_marginLeft="@dimen/padding_common_h"
+                                        android:layout_marginRight="@dimen/padding_common_h"
+                                        android:text="|" />
+
+                                    <TextView
+                                        android:id="@+id/tv_personel_work"
+                                        style="@style/AppTheme.Label"
+                                        android:text="工作 40" />
+
+                                    <TextView
+                                        style="@style/AppTheme.Label"
+                                        android:layout_marginLeft="@dimen/padding_common_h"
+                                        android:layout_marginRight="@dimen/padding_common_h"
+                                        android:text="|" />
+
+                                    <TextView
+                                        android:id="@+id/tv_personel_event"
+                                        style="@style/AppTheme.Label"
+                                        android:text="事件 162" />
+
+                                    <TextView
+                                        style="@style/AppTheme.Label"
+                                        android:layout_marginLeft="@dimen/padding_common_h"
+                                        android:layout_marginRight="@dimen/padding_common_h"
+                                        android:text="|" />
+
+                                    <TextView
+                                        android:id="@+id/tv_personel_all"
+                                        style="@style/AppTheme.Label"
+                                        android:text="全部" />
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/civ_personel_head"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginLeft="@dimen/padding_common"
+                                android:layout_marginStart="@dimen/padding_common"
+                                android:src="@mipmap/image_avatar_5"
+                                app:civ_border_color="@android:color/white"
+                                app:civ_border_overlay="true"
+                                app:civ_border_width="3dp" />
+
+                            <TextView
+                                android:id="@+id/visitor"
+                                style="@style/AppTheme.Label.Layout"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:background="?attr/selectableItemBackground"
+                                android:shadowColor="#aa000000"
+                                android:shadowDx="2.5"
+                                android:shadowDy="2.5"
+                                android:shadowRadius="10"
+                                android:text="关联事件 15"
+                                android:textColor="@android:color/white"
+                                android:visibility="gone" />
+
+                            <View
+                                style="@style/AppTheme.Division"
+                                android:layout_alignParentBottom="true" />
+                        </RelativeLayout>
+
+                    </android.support.design.widget.CollapsingToolbarLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_personel_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="0dp"
+                        app:layout_scrollFlags="scroll">
+
+                        <LinearLayout
+                            style="@style/AppTheme.CommonBar.Panel"
+                            android:background="@color/colorDivision"
+                            android:paddingBottom="@dimen/division_line"
+                            android:paddingTop="@dimen/division_line">
+
+                            <LinearLayout
+                                android:id="@+id/fmc_center_dynamic"
+                                style="@style/AppTheme.CommonBar.Bar"
+                                android:background="@android:color/white">
+
+                                <TextView
+                                    style="@style/AppTheme.CommonBar.Content.Value"
+                                    android:text="与TA相关" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_personel_all"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+
+                        <View
+                            android:layout_marginLeft="114dp"
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:background="#cccccc"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="#cccccc"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/AppTheme.Toolbar"
+        android:layout_marginBottom="0dp"
+        android:background="@android:color/transparent"
+        app:layout_collapseMode="pin"
+        app:navigationIcon="?attr/homeAsUpIndicator">
+
+        <android.support.v7.widget.ButtonBarLayout
+            android:id="@+id/buttonBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_bg">
+
+                <EditText
+                    android:id="@+id/et_personel_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="@null"
+                    android:hint="搜索、输入关键字"
+                    android:padding="8dp"
+                    android:textColor="@color/text_gray"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+        </android.support.v7.widget.ButtonBarLayout>
+    </android.support.v7.widget.Toolbar>
+</RelativeLayout>

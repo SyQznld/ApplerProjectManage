@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_common"
+        android:paddingRight="@dimen/padding_common">
+
+        <TextView
+            android:id="@+id/tvtime"
+            style="@style/AppTheme.Label"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:text="21:44"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/padding_common"
+            android:layout_marginRight="@dimen/padding_common"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="@dimen/division_line"
+                android:layout_height="25dp"
+                android:background="#cccccc" />
+
+            <com.flyco.roundview.RoundFrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:rv_isRadiusHalfHeight="true"
+                app:rv_strokeColor="#cccccc"
+                app:rv_strokeWidth="@dimen/division_line">
+
+                <ImageView
+                    android:id="@+id/ivclassify"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/padding_common"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/ic_feed_list_mail" />
+            </com.flyco.roundview.RoundFrameLayout>
+
+            <View
+                android:layout_width="@dimen/division_line"
+                android:layout_height="match_parent"
+                android:background="#cccccc" />
+        </LinearLayout>
+
+        <com.flyco.roundview.RoundLinearLayout
+            android:id="@+id/rllclick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_common_d"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            app:rv_cornerRadius="@dimen/padding_common_d"
+            app:rv_strokeColor="#cccccc"
+            app:rv_strokeWidth="@dimen/division_line">
+
+            <TextView
+                android:id="@+id/tvname"
+                style="@style/AppTheme.Label.Title"
+                android:layout_gravity="center_vertical"
+                android:text="Steffen Norgaard Andersen"
+                android:textColor="@color/black" />
+
+        </com.flyco.roundview.RoundLinearLayout>
+    </LinearLayout>
+</LinearLayout>

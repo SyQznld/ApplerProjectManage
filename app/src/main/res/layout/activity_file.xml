@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context="com.example.q_kang.pmsystem.ui.activity.FileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/blue">
+
+        <ImageButton
+            android:id="@+id/ib_file_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="12dp"
+            android:src="@mipmap/image_b" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="文件管理"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/mic_file"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_file"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:visibility="gone"
+            android:id="@+id/fab_file_sure"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="23dp"
+            android:src="@mipmap/image_sure"
+            app:fabSize="mini" />
+
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:visibility="gone"
+            android:id="@+id/fam_photo"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="13dp"
+            app:menu_colorNormal="#516aba"
+            app:menu_colorPressed="#fff"
+            app:menu_colorRipple="#666"
+            app:menu_fab_size="mini"
+            app:menu_icon="@drawable/ic_menu"
+            app:menu_labels_position="left"
+            app:menu_labels_style="@style/MenuLabelsStyle"
+            app:menu_shadowColor="#444">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_camera"
+                style="@style/MenuButtonsStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_camera"
+                app:fab_colorDisabled="@color/colorAccent"
+                app:fab_label="图片/视频" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_album"
+                style="@style/MenuButtonsStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_album"
+                app:fab_colorDisabled="@color/colorAccent"
+                app:fab_label="相册选择" />
+        </com.github.clans.fab.FloatingActionMenu>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_file_manage_choose"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="13dp"
+            android:src="@drawable/ic_file_file"
+            android:visibility="gone"
+            app:fabSize="auto"
+            app:fab_colorNormal="#516aba" />
+
+    </RelativeLayout>
+
+</LinearLayout>

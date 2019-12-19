@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/child_height"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:gravity="center_horizontal"
+            android:id="@+id/et_key"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:layout_weight="3"
+            android:background="@null"
+            android:text="项目名称:"
+            android:textColor="#000"
+            android:textSize="13sp" />
+
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:orientation="horizontal">
+
+            <EditText
+                android:textColor="@color/textcolor"
+                android:id="@+id/et_value"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_weight="5"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingStart="7dp"
+                android:textSize="13sp" />
+
+            <ImageButton
+                android:id="@+id/ib_add_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:padding="@dimen/dp_10"
+                android:src="@mipmap/create_model_del" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

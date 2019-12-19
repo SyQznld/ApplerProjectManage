@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recy_phone_member"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.mcxtzhang.indexlib.IndexBar.widget.IndexBar
+        android:id="@+id/mIndexBar"
+        android:layout_width="24dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="28dp"
+        app:indexBarPressBackground="#83e2e2e2"
+        app:indexBarTextSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvSideBarHint"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:background="#c3383838"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="48sp"
+        android:visibility="gone"
+        tools:text="A"
+        tools:visibility="visible" />
+
+</FrameLayout>

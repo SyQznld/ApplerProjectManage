@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="com.example.q_kang.pmsystem.ui.activity.photo.PhotoAlbumActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <ImageButton
+            android:id="@+id/ib_photo_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="12dp"
+            android:src="@drawable/ic_back_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="图片列表"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#cccccc" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_10">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_photo_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="点击右下角按钮选择图片"
+            android:visibility="gone" />
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fam_photo"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="13dp"
+            android:visibility="gone"
+            app:menu_colorNormal="#516aba"
+            app:menu_colorPressed="#fff"
+            app:menu_colorRipple="#666"
+            app:menu_fab_size="mini"
+            app:menu_icon="@drawable/ic_menu"
+            app:menu_labels_position="left"
+            app:menu_labels_style="@style/MenuLabelsStyle"
+            app:menu_shadowColor="#444">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_camera"
+                style="@style/MenuButtonsStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_camera"
+                app:fab_colorDisabled="@color/colorAccent"
+                app:fab_label="图片/视频" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_album"
+                style="@style/MenuButtonsStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_album"
+                app:fab_colorDisabled="@color/colorAccent"
+                app:fab_label="相册选择" />
+        </com.github.clans.fab.FloatingActionMenu>
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_sure"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="13dp"
+            android:src="@mipmap/image_sure"
+            app:fab_colorDisabled="@color/colorAccent" />
+    </RelativeLayout>
+
+
+</LinearLayout>
